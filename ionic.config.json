@@ -1,0 +1,7 @@
+{
+  "name": "flex-test",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
