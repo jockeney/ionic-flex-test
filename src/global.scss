@@ -13,19 +13,43 @@
 html, body {
   width: 100%;
   height: 100%;
+  background-color: orange;
 }
 
-.container {
+.FBcontainer {
   min-height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  background-color: red;
 }
 
-.main {
-  flex-grow: 1;
+.FBmain {
+  height: 100%;
+  width: 100%;
+  -webkit-box-flex: 22;
+  -webkit-flex:22;
+  -ms-flex: 22;
+  flex:22;
+  display: -webkit-flex; /* iOS Safari 8 support */
+  -webkit-flex-wrap: wrap; /* iOS Safari 8 support */
+  display: -ms-flexbox;
+  margin: auto;
+  background-color: yellow;
 }
 
-.top, .main, .bottom {
-  flex-shrink: 0;
+.FBbottom {
+  height: 100%;
+  width: 100%;
+  -webkit-box-flex: 2;
+  -webkit-flex:2;
+  -ms-flex: 2;
+  flex:2;
+  display: -webkit-flex; /* iOS Safari 8 support */
+  -webkit-flex-wrap: wrap; /* iOS Safari 8 support */
+  display: -ms-flexbox;
+  margin: auto;
+  background-color: green;
 }
+

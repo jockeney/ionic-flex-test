@@ -1,16 +1,17 @@
 <ion-app>
-  <div class="container">
-      <ion-header class="top">
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-title>
-            Home
-          </ion-title>
-        </ion-toolbar>
-      </ion-header>
-    <ion-split-pane class="main" *ngIf="platform && !platform.is('ios')">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Home
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-split-pane>
       <ion-menu>
         <ion-header>
           <ion-toolbar>
@@ -32,18 +33,24 @@
       </ion-menu>
       <ion-router-outlet main></ion-router-outlet>
     </ion-split-pane>
-    <ion-router-outlet class="main" *ngIf="platform && platform.is('ios')"></ion-router-outlet>
-    <div class="bottom" *ngIf="url !== '/auth' && platform && platform.is('ios')" >
-      <ion-grid>
-        <ion-row style="text-align: center">
-          <ion-col [ngStyle]="{'color': '#8c8c8c' }">
-            <ion-icon ios="ios-home"></ion-icon>
-          </ion-col>
-          <ion-col [ngStyle]="{'color': '#8c8c8c' }">
-            <ion-icon ios="ios-person"></ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+
+    <div class="FBcontainer">
+      <div class="FBmain">
+        <ion-router-outlet style="visibility: hidden"></ion-router-outlet>
+      </div>
+
+      <div class="FBbottom">
+        <ion-grid>
+          <ion-row style="text-align: center">
+            <ion-col [ngStyle]="{'color': '#8c8c8c' }">
+              <ion-icon ios="ios-home"></ion-icon>
+            </ion-col>
+            <ion-col [ngStyle]="{'color': '#8c8c8c' }">
+              <ion-icon ios="ios-person"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
     </div>
-  </div>
+
 </ion-app>
