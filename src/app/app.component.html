@@ -31,26 +31,33 @@
           </ion-list>
         </ion-content>
       </ion-menu>
-      <ion-router-outlet main></ion-router-outlet>
+
+
+      <div class="FBcontainer" main>
+        <div class="FBmain">
+          <div class="FBmainContents">
+            <ion-router-outlet></ion-router-outlet>
+          </div>
+        </div>
+
+        <div class="FBbottom">
+          <div class="FBbottomContents">
+            <ion-grid>
+              <ion-row style="text-align: center">
+                <ion-col [ngStyle]="{'color': '#8c8c8c' }">
+                  <ion-icon name="home"></ion-icon>
+                </ion-col>
+                <ion-col [ngStyle]="{'color': '#8c8c8c' }">
+                  <ion-icon name="person"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+
     </ion-split-pane>
 
-    <div class="FBcontainer">
-      <div class="FBmain">
-        <ion-router-outlet style="visibility: hidden"></ion-router-outlet>
-      </div>
 
-      <div class="FBbottom">
-        <ion-grid>
-          <ion-row style="text-align: center">
-            <ion-col [ngStyle]="{'color': '#8c8c8c' }">
-              <ion-icon ios="ios-home"></ion-icon>
-            </ion-col>
-            <ion-col [ngStyle]="{'color': '#8c8c8c' }">
-              <ion-icon ios="ios-person"></ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-    </div>
 
 </ion-app>

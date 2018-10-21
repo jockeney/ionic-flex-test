@@ -13,16 +13,14 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: orange;
+  //background-color: orange;
 }
 
 .FBcontainer {
-  min-height: 100%;
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  background-color: red;
+  //background-color: red;
 }
 
 .FBmain {
@@ -35,8 +33,14 @@ html, body {
   display: -webkit-flex; /* iOS Safari 8 support */
   -webkit-flex-wrap: wrap; /* iOS Safari 8 support */
   display: -ms-flexbox;
-  margin: auto;
-  background-color: yellow;
+  //background-color: yellow;
+  display: flex;
+  flex-direction: row;
+}
+
+.FBmainContents {
+  height: 94%;
+  flex:1;
 }
 
 .FBbottom {
@@ -50,6 +54,12 @@ html, body {
   -webkit-flex-wrap: wrap; /* iOS Safari 8 support */
   display: -ms-flexbox;
   margin: auto;
-  background-color: green;
+  //background-color: green;
+  display: flex;
+  flex-direction: row;
 }
 
+
+.FBbottomContents {
+  flex:1;
+}
